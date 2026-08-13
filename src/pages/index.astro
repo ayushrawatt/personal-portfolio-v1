@@ -1,11 +1,198 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import '../styles/os.css';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ayush Rawat - OS Portfolio v2.0</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="An interactive retro-futuristic operating system portfolio of Ayush Rawat - !Full Stack Developer." />
+  </head>
+  <body>
+    <div class="crt-overlay"></div>
+    <div class="crt-monitor">
+      
+      <!-- BOOT SCREEN -->
+      <div id="boot-screen">
+        <div class="boot-line" style="color: #ffff00;">BIOS Version 2.0.26 (C) 2007-2077 AYUSH'S CORP.</div>
+        <div class="boot-line">CPU: Intel i9-KELA @4.20GHz</div>
+        <div class="boot-line">Memory Test: 65536KB OK</div>
+        <div class="boot-line">Detecting Primary Master ... HARD DISK 1024MB</div>
+        <div class="boot-line">Detecting Primary Slave ... NONE</div>
+        <div class="boot-line">Loading boot sector ... OK</div>
+        <div class="boot-line">Status ... SOME HOW WORKING</div>
+        <div class="boot-line" style="margin-top: 10px; white-space: pre;">
+ ____   ___  ____ _____ _____ ___  _     ___ ___   ___  ____  
+|  _ \ / _ \|  _ \_   _|  ___/ _ \| |   |_ _/ _ \ / _ \/ ___| 
+| |_) | | | | |_) || | | |_ | | | | |    | | | | | | | \___ \ 
+|  __/| |_| |  _ &lt; | | |  _|| |_| | |___ | | |_| | |_| |___) |
+|_|    \___/|_| \_\|_| |_|   \___/|_____|___\___/ \___/|____/ 
+        </div>
+        <div class="boot-line" style="margin-top: 10px; color: #ffff00;">SYSTEM INITIALIZING...</div>
+        <div id="boot-log" style="font-family: monospace; font-size: 14px; margin-top: 5px;"></div>
+        <div class="boot-progress-container">
+          <div id="boot-progress" class="boot-progress-bar"></div>
+        </div>
+        <div class="boot-line" style="margin-top: 5px; font-size: 14px; opacity: 0.6;">Press [ESC] to skip boot animation</div>
+      </div>
+
+      <!-- DESKTOP ENVIRONMENT -->
+      <div id="desktop-environment">
+        
+        <!-- STATUS BAR -->
+        <header id="status-bar">
+          <div class="status-left">
+            <span>🟢 SYSTEM: ONLINE</span>
+            <span>|</span>
+            <span>ROLE: FULL STACK DEVELOPER</span>
+          </div>
+          <div class="status-right">
+            <span>STATUS: <span style="color: var(--os-text-green); font-weight: bold;">AVAILABLE FOR HIRE</span></span>
+            <span>|</span>
+            <a href="https://github.com/ayushrawatt" target="_blank" class="status-link">GITHUB</a>
+            <a href="https://linkedin.com/" target="_blank" class="status-link">LINKEDIN</a>
+            <a href="" target="_blank" class="status-link">RESUME</a>
+          </div>
+        </header>
+
+        <!-- WALLPAPER CANVAS -->
+        <canvas id="wallpaper-canvas"></canvas>
+
+        <!-- DESKTOP WORKSPACE -->
+        <main id="desktop-workspace">
+          
+          <!-- ICON GRID -->
+          <div class="icon-grid" id="desktop-icons">
+            <div class="desktop-icon" data-app="about" title="About Me">
+              <span class="desktop-icon-symbol">👤</span>
+              <span class="desktop-icon-label">About Me</span>
+            </div>
+            <div class="desktop-icon" data-app="terminal" title="Terminal Prompt">
+              <span class="desktop-icon-symbol">💻</span>
+              <span class="desktop-icon-label">Terminal</span>
+            </div>
+            <div class="desktop-icon" data-app="filemanager" title="File Explorer">
+              <span class="desktop-icon-symbol">📁</span>
+              <span class="desktop-icon-label">Files</span>
+            </div>
+            <div class="desktop-icon" data-app="projects" title="Project Gallery">
+              <span class="desktop-icon-symbol">📂</span>
+              <span class="desktop-icon-label">Projects</span>
+            </div>
+            <div class="desktop-icon" data-app="skills" title="Skillset Info">
+              <span class="desktop-icon-symbol">⚙️</span>
+              <span class="desktop-icon-label">Skills</span>
+            </div>
+            <div class="desktop-icon" data-app="notepad" title="Notepad Editor">
+              <span class="desktop-icon-symbol">📝</span>
+              <span class="desktop-icon-label">Notepad</span>
+            </div>
+            <div class="desktop-icon" data-app="tetris" title="Tetris Game">
+              <span class="desktop-icon-symbol">🎮</span>
+              <span class="desktop-icon-label">Tetris</span>
+            </div>
+            <div class="desktop-icon" data-app="snake" title="Snake Game">
+              <span class="desktop-icon-symbol">🐍</span>
+              <span class="desktop-icon-label">Snake</span>
+            </div>
+            <div class="desktop-icon" data-app="minesweeper" title="Minesweeper Game">
+              <span class="desktop-icon-symbol">💣</span>
+              <span class="desktop-icon-label">Minesweeper</span>
+            </div>
+            <div class="desktop-icon" data-app="music" title="Music Synthesizer">
+              <span class="desktop-icon-symbol">🎵</span>
+              <span class="desktop-icon-label">Music</span>
+            </div>
+          </div>
+
+        </main>
+
+        <!-- TASKBAR -->
+        <footer id="taskbar">
+          <button id="start-button">
+            <span id="start-button-logo">❖</span> START
+          </button>
+          
+          <div id="taskbar-items-container"></div>
+          
+          <div id="system-tray">
+            <span class="tray-icon" title="Sound Output" id="volume-indicator">🔊</span>
+            <span class="tray-icon" title="CRT Scanlines Switch" id="scanline-switch">📺</span>
+            <span id="tray-clock">00:00:00</span>
+          </div>
+        </footer>
+
+        <!-- START MENU -->
+        <div id="start-menu">
+          <div class="start-menu-sidebar">
+            <div class="start-menu-sidebar-text">PORTFOLIO OS</div>
+          </div>
+          <div class="start-menu-items">
+            <div class="start-menu-item" data-app="about">
+              <span>👤</span> About Developer
+            </div>
+            <div class="start-menu-item" data-app="terminal">
+              <span>💻</span> MS-DOS Prompt
+            </div>
+            <div class="start-menu-item" data-app="filemanager">
+              <span>📁</span> File Navigator
+            </div>
+            <div class="start-menu-item" data-app="projects">
+              <span>📂</span> Project Catalog
+            </div>
+            <div class="start-menu-item" data-app="skills">
+              <span>⚙️</span> Resource Monitor (Skills)
+            </div>
+            <div class="start-menu-item" data-app="notepad">
+              <span>📝</span> Text Notepad
+            </div>
+            <div class="start-menu-divider"></div>
+            <div class="start-menu-item" data-app="tetris">
+              <span>🎮</span> Play Tetris
+            </div>
+            <div class="start-menu-item" data-app="snake">
+              <span>🐍</span> Play Snake
+            </div>
+            <div class="start-menu-item" data-app="minesweeper">
+              <span>💣</span> Play Minesweeper
+            </div>
+            <div class="start-menu-item" data-app="music">
+              <span>🎵</span> Chiptune Synthesizer
+            </div>
+            <div class="start-menu-divider"></div>
+            <div class="start-menu-item" id="start-menu-reboot">
+              <span>🔄</span> Reboot System
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTEXT MENU (Right Click) -->
+        <div id="context-menu">
+          <div class="context-menu-item" id="cm-refresh">Refresh Desktop</div>
+          <div class="context-menu-item context-menu-submenu-parent">
+            Change Theme ➔
+            <div class="context-menu-submenu">
+              <div class="context-menu-item" id="theme-classic">Classic Blue</div>
+              <div class="context-menu-item" id="theme-matrix">Matrix Green</div>
+              <div class="context-menu-item" id="theme-synthwave">Synthwave Grid</div>
+            </div>
+          </div>
+          <div class="context-menu-item" id="cm-terminal">Open Command Line</div>
+          <div class="context-menu-item" id="cm-notepad">Open Notepad</div>
+          <div class="context-menu-item" id="cm-reboot">Reboot</div>
+        </div>
+
+        <!-- NOTIFICATION CONTAINER -->
+        <div id="notification-container"></div>
+
+      </div>
+
+    </div>
+
+    <!-- MAIN OS LOGIC SCRIPT -->
+    <script src="/scripts/os.js" type="module" is:inline></script>
+  </body>
+</html>
