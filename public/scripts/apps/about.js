@@ -23,7 +23,7 @@ ____ ____ _  _ ____ ___
       <div class="about-section">
         <div class="about-title">📖 BIOGRAPHY</div>
         <div style="text-align: justify; font-size:12px;">
-          I am a passionate software developer who loves creating interactive, high-performance web experiences. 
+          I am a passionate !(software developer) who loves creating interactive, high-performance web experiences. 
           I specialize in building modular JavaScript apps, Astro sites, custom design systems, and robust backend systems. 
           When I'm not coding, I'm researching terminal themes, retro gaming consoles, or artificial intelligence systems.
         </div>
@@ -32,7 +32,7 @@ ____ ____ _  _ ____ ___
       <div class="about-section">
         <div class="about-title">🏆 AWARDS & CERTIFICATIONS</div>
         <div style="font-size:12px;">
-          • 🥇 Winner - National Hackathon 2024 (Best UI/UX)<br>
+          • 🥇 Winner - Will Become (Best UI/UX)<br>
           • 💻 Certified AWS Cloud Developer Associate<br>
           • 🛡️ Advanced CyberSecurity Specialist Certification (2025)
         </div>

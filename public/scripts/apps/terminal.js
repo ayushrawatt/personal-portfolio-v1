@@ -8,7 +8,7 @@ const VIRTUAL_FS = {
     'System': { isDir: true }
   },
   '/About': {
-    'bio.txt': { isDir: false, content: 'Ayush Rawat is a Full Stack Engineer based in New Delhi, India.\nSpecializing in frontend architecture, node, python, cloud and web APIs.' },
+    'bio.txt': { isDir: false, content: 'Ayush Rawat is yet not a Full Stack Engineer based in , India.\nSpecializing in frontend architecture, node, python, cloud and web APIs.' },
     'contact.txt': { isDir: false, content: 'Email: ayush.rawat@example.com\nGitHub: github.com/AyushRawat\nLinkedIn: linkedin.com/in/AyushRawat' }
   },
   '/Projects': {
@@ -47,7 +47,7 @@ export default function(container, win) {
   const promptSpan = container.querySelector('.terminal-prompt');
 
   // Print welcome lines on start
-  writeLine('Welcome to Portfolio OS v2.0 Terminal Prompt.', 'system');
+  writeLine('Welcome to Portfolio OS v67 Terminal Prompt.', 'system');
   writeLine('Type "help" to see available executable commands.', 'warning');
   writeLine('', '');
 
@@ -149,12 +149,12 @@ export default function(container, win) {
         writeLine('  \\ \\_\\ \\_\\\\/\\_____\\\\/\\_____\\', 'system');
         writeLine('   \\/_/\\/_/ \\/_____/ \\/_____/', 'system');
         writeLine('-----------------------------');
-        writeLine('OS: Portfolio OS v2.0 (Gemini Edition)');
-        writeLine('Host: Intel Web Core Processor');
-        writeLine('Shell: JavaScript ES6 Terminal Shell');
+        writeLine('OS: PortfoliOS v67 (x99_9)');
+        writeLine('Host: Doom Machine');
+        writeLine('Shell: T.A.R.S');
         writeLine('Resolution: ' + window.innerWidth + 'x' + window.innerHeight);
         writeLine('Theme: ' + (window.OS ? window.OS.activeTheme.toUpperCase() : 'CLASSIC'));
-        writeLine('Processor: Gemini 3.5 Flash Core');
+        writeLine('CPU: Steel Balls');
         break;
 
       case 'echo':
