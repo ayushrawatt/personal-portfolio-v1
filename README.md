@@ -1,5 +1,16 @@
 # Astro Starter Kit: Basics
 
+**A Retro Operating-System-Inspired Portfolio**
+
+Welcome to my digital desktop.
+
+This portfolio is designed to feel like a nostalgic operating system from the early days of personal computing, blending retro interfaces, terminal-style interactions, pixel-inspired visuals, and modern web development.
+
+Explore my projects, skills, experiments, and developer journey through a playful OS-inspired experience where every window, command, and interaction is part of the interface.
+
+**Boot the system. Explore the desktop. Discover the developer behind it.**
+
+
 ```sh
 npm create astro@latest -- --template basics
 ```
