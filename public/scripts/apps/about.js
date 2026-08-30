@@ -16,7 +16,7 @@ ____ ____ _  _ ____ ___
         <div class="about-title">👤 PROFILE INFO</div>
         <div><strong>Name:</strong> Ayush Rawat</div>
         <div><strong>Title:</strong> Full Stack Software Engineer</div>
-        <div><strong>Location:</strong> Chandigarh, India</div>
+        <div><strong>Location:</strong> India</div>
         <div><strong>Status:</strong> Active (Available for hiring/contracts)</div>
       </div>
 
@@ -52,7 +52,7 @@ ____ ____ _  _ ____ ___
   // Email copy event
   const copyBtn = container.querySelector('#about-copy-email');
   copyBtn.addEventListener('click', () => {
-    const email = 'ayush.rawat@example.com';
+    const email = 'ayushhrawat@gmail.com';
     navigator.clipboard.writeText(email).then(() => {
       if (window.OS && typeof window.OS.windows.terminal !== 'undefined') {
         window.OS.windows.terminal.querySelector('.terminal-history').innerHTML += `\n[System] Email address copied to clipboard: ${email}\n`;

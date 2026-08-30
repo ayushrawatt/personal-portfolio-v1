@@ -250,7 +250,7 @@ export default function(container, win) {
         writeLine('TRANSMIT DIRECTIVES:');
         writeLine('  GitHub: https://github.com/AyushRawat');
         writeLine('  LinkedIn: https://linkedin.com/in/AyushRawat');
-        writeLine('  Email: ayush.rawat@example.com');
+        writeLine('  Email: ayushhrawat5657@gmail.com');
         break;
 
       case 'open':
@@ -303,19 +303,24 @@ export default function(container, win) {
     writeLine('CONNECTING TO REMOTE GATEWAY ...', 'warning');
     
     let lineIdx = 0;
-    const hackLines = [
-      '>> Handshake protocol established (IPv4: 198.162.24.120)',
-      '>> Sending decrypt vectors ... [0x43FA, 0x12FF, 0x88BC]',
-      '>> Accessing server root logs ... SUCCESS',
-      '>> Downloading private repository assets ...',
-      '████████████████████████ 100% OK',
-      '>> Fetching developer credential tokens ...',
-      '>> DECRYPTED CREDENTIALS FOUND:',
-      '   User: Ayush Rawat',
-      '   Key ID: SHA-256-420A11',
-      '   Privilege level: SYSTEM AUTHORIZED',
-      '>> PORTFOLIO INJECTED SUCCESSFULLY. SYSTEM ACCESS GRANTED.'
-    ];
+   const hackLines = [
+  '>> Handshake protocol established (IPv4: 198.162.24.120)',
+  '>> Sending decrypt vectors ... [0x43FA, 0x12FF, 0x88BC]',
+  '>> Accessing server root logs ... SUCCESS',
+  '>> Downloading private repository assets ...',
+  '████████████████████████ 100% OK',
+  '>> Fetching developer credential tokens ...',
+  '>> DECRYPTED CREDENTIALS FOUND:',
+  '   HAHAA....HA',
+  '╔══════════════════════════════════════╗',
+  '║ 🚨 UNAUTHORIZED HACK ATTEMPT 🚨     ║',
+  '║                                      ║',
+  '║ ACCESS DENIED — Skill issue detected.║',
+  '╚══════════════════════════════════════╝',
+  '>> Privilege level: SYSTEM AUTHORIZED',
+  '>> PORTFOLIO INJECTED SUCCESSFULLY.',
+  '>> SYSTEM ACCESS NEVER GRANTED. 😎'
+];
 
     const hackInterval = setInterval(() => {
       if (lineIdx < hackLines.length) {
